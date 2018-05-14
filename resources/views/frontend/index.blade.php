@@ -10,7 +10,7 @@
       </div>
       <video id="video" style="width: 100%;" autoplay="autoplay" loop controls="">
         <source src="/videos/video.mp4" type="video/mp4">
-        <source src="/videos/video.webm" type="video/webm">
+        <!-- <source src="/videos/video.webm" type="video/webm"> -->
       </video>
     </li>
   </ul>
@@ -35,10 +35,10 @@
           <div class="grid_block">
             <div class="product product_info">
               <div class="product_img">
-                <img src="{{ App\Models\Backend\Gallery::getGallery() }}" alt="" />
+                <img src="/img/galleries/{{ App\Models\Backend\Gallery::getGallery() }}" alt="" />
               </div>
               <div class="product_title">Фотогалерея</div>
-              <a href="#" class="product_link">
+              <a href="/galleries" class="product_link">
                 <span class="more_span"><span>Подробнее</span></span>
               </a>
             </div>

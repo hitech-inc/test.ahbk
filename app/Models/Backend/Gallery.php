@@ -53,8 +53,8 @@ class Gallery extends Model
 
     public static function getGallery()
     {
-        $gallery = self::where('img', '!=', null)->get();
-        return $gallery;
+        $gallery = self::where('img', '!=', null)->first();
+        return $gallery->img;
     }
 
     
