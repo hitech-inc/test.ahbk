@@ -35,7 +35,7 @@
           <div class="grid_block">
             <div class="product product_info">
               <div class="product_img">
-                <img src="/upload/iblock/0g5/lab.jpg" alt="" />
+                <img src="{{ App\Models\Backend\Gallery::getGallery() }}" alt="" />
               </div>
               <div class="product_title">Фотогалерея</div>
               <a href="#" class="product_link">
@@ -88,7 +88,7 @@
           <div class="grid_block">
             <div class="product product_info">
               <div class="product_img">
-                <img src="/upload/iblock/0g5/product.jpg" alt="" />
+                <img src="http://via.placeholder.com/644x413" alt="" />
               </div>
               <div class="product_title">Продукция</div>
               <a href="#" class="product_link">

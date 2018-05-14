@@ -51,5 +51,11 @@ class Gallery extends Model
         'img' => 'required'
     ];
 
+    public static function getGallery()
+    {
+        $gallery = self::where('img', '!=', null)->get();
+        return $gallery;
+    }
+
     
 }
