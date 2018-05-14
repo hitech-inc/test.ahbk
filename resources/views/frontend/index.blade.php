@@ -8,7 +8,7 @@
         <center style="margin: 0 auto; max-width: 1360px; padding: 0px 20px;">
          {!! $text->text !!}</center>
       </div>
-      <video id="video" style="width: 100%;" autoplay="autoplay" loop controls="">
+      <video id="video" style="width: 100%;" autoplay="autoplay" muted loop controls="">
         <source src="/videos/video.mp4" type="video/mp4">
         <!-- <source src="/videos/video.webm" type="video/webm"> -->
       </video>
