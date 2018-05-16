@@ -46,7 +46,6 @@
 					АХБК   
 				</div>
 				<div class="contact_image">
-					<!-- <img src="http://www.antarn.ru.images.1c-bitrix-cdn.ru/upload/iblock/d67/d6786076ca9d7bf984c97c40f34585ed.jpg?1425040250137594" alt="" /> -->
 					<div id="map" style="width: 100%; height: 400px"></div>
 				</div>
 				<div class="contact_table">
