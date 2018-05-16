@@ -44,13 +44,28 @@
       @endforeach
     </ul>
   </div>--}}
-  <div class="text">
+  {{--<div class="text">
   @foreach( $techEquipments as $techEquipment )
     <h2 style="border: 0px; background-image: initial; background-color: #ffffff;"><span style="border: 0px; background-image: initial;">{{ $techEquipment->title }}</span></h2>
     <p>{!! $techEquipment->text !!}</p>
     <p></p>	
   @endforeach  
     <div style="clear:both"></div>        
+  </div>--}}
+  <div class="text">
+    <div class="container">
+      <h2 style="border: 0px; background-image: initial; background-color: #ffffff;"><span style="border: 0px; background-image: initial;">Техническое оснащение швейного производства «АХБК»</span></h2>
+      <div class="row">
+        @foreach( $techEquipments as $techEquipment )
+        <div class="col-4">
+          <h3 style="border: 0px; background-image: initial; background-color: #ffffff; font-size: 18px;"><span style="border: 0px; background-image: initial;">{{ $techEquipment->title }}</span></h3>
+          <p>{!! $techEquipment->text !!}</p>
+          <p></p> 
+          <div style="clear:both"></div> 
+        </div>
+        @endforeach 
+      </div>
+    </div>        
   </div>
 
 <!-- center --> <!-- content -->

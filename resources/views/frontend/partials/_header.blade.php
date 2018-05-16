@@ -86,7 +86,7 @@
                     <a href="#">Школьная форма</a>
                 </div></li>                        <li>
                 <div class="link_wrap">
-                    <a href="#">Комплекты постельного белья</a>
+                    <a href="#">Домашний текстиль</a>
                 </div></li>   </ul></li>
                                         <li>
                 <a  href="/galleries">Фотогалерея</a>

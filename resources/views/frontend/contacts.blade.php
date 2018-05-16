@@ -51,20 +51,19 @@
 				</div>
 				<div class="contact_table">
 					<table>
-						@foreach( $contacts as $contact )
 						<tr>
-							<td>
-								Адрес
-							</td>
-							<td>
-								{{$contact->address}}</td>
+							<td colspan="2" style="text-align:center;">Отдел продаж в Шымкенте</td>
+						</tr>
+							<tr>
+								<td>Адрес</td>
+								<td>Казахстан, ЮКО, Сайрамский р-н, пос.Аксукент, Карабулакское шоссе 18А</td>
 							</tr>
 							<tr>
 								<td>
 									Телефон
 								</td>
 								<td>
-									{{$contact->phone}}<br />
+									+7 702 500 66 05 Дана
 								</td>
 							</tr>
 							<tr>
@@ -72,10 +71,29 @@
 									E-mail
 								</td>
 								<td>
-									<a href="index.html#">{{$contact->email}}</a>
+									KalmenovaD@ahbk.kz
 								</td>
 							</tr>
-							@endforeach
+						<tr>
+							<td colspan="2" style="text-align:center;">Отдел продаж в Алматы</td>
+						</tr>
+							<tr>
+								<td>
+									Телефон
+								</td>
+								<td>
+									+7 777 241 17 54 Светлана Ивановна
+								</td>
+							</tr>
+							<tr>
+								<td>
+									E-mail
+								</td>
+								<td>
+									 info@ahbk.kz
+								</td>
+							</tr>
+						<tr>
 						</table>
 					</div>
 					@include('frontend.partials._callback')
