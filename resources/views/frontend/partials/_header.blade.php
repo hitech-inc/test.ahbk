@@ -134,11 +134,11 @@
 </form> 
 					
 				</div>
-				<div class="language">
+				<!-- <div class="language">
 					<div class="curent_lang">ru</div>
 					<div class="pointer lang_list">
 						<a onclick="langch()">en</a>
 					</div>
-				</div>
+				</div> -->
             </div><!-- header -->
 	</div><!-- center -->
