@@ -11,21 +11,23 @@
     <div class="grid">
      <ul class="clear">
       @foreach ( $galleries as $gallery )
-      <li data-form="" class="">
+      <li data-form="" class="" style="width: 33.3333%">
         <div class="grid_block">
           <div class="product">
-           <div class="product_img">
-              <img class="product_img" src="/img/galleries/{{ $gallery->img }}" alt="$gallery->img" />
+            <div class="product_img">
+              <a href="/img/galleries/big/{{ $gallery->img }}" data-lightbox="roadtrip">
+                <img class="product_img" src="/img/galleries/{{ $gallery->small_img }}" alt="$gallery->img" style="max-width: 100%" />
+              </a>
             </div>
-            <div class="product_title">{{ $gallery->title }}</div>
+            {{--<div class="product_title">{{ $gallery->title }}</div>
               <a href="#" class="product_link">
                 <span class="mask"></span>
                 <span class="product_text">{!! $gallery->text !!}</span>
                 <span class="more_span"><span>Подробнее</span></span>
-              </a>
-            </div>
+              </a>--}}
           </div>
-        </li>
+        </div>
+      </li>
         @endforeach
       </ul>
     </div>

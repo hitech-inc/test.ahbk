@@ -27,7 +27,8 @@ class Gallery extends Model
     public $fillable = [
         'title',
         'text',
-        'img'
+        'img',
+        'small_img'
     ];
 
     /**
@@ -47,7 +48,6 @@ class Gallery extends Model
      * @var array
      */
     public static $rules = [
-        'title' => 'required',
         'img' => 'required'
     ];
 

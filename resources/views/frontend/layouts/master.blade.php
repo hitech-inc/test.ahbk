@@ -7,6 +7,7 @@
 <link href="/bitrix/cache/css/s1/ahbk/kernel_main/kernel_main.css?151689290126919" type="text/css"  rel="stylesheet" />
 <link href="/bitrix/cache/css/s1/ahbk/template_e09673e266596228105bd81bfefa93a7_2852939192b3d33a9b5ecc4c07dfd3cc.css?15168906637159" type="text/css"  data-template-style="true"  rel="stylesheet" />
 <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/lightbox.min.css">
 
 <script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
 <script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
@@ -65,5 +66,6 @@ bxSession.Expand(1440, '935a6e77794da21ed5a24ca8fdd10d61', false, 'a6521468cc4f3
       var video = $("#video");
     });
   </script>
+  <script src="/js/lightbox.min.js"></script>
 </body>  
     

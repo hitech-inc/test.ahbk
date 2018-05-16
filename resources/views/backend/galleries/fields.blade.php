@@ -1,12 +1,18 @@
 <!-- Title Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-4">
     {!! Form::label('title', 'Title:') !!}
     {!! Form::text('title', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Small_img Field -->
+<div class="form-group col-sm-4">
+    {!! Form::label('small_img', 'Small img:') !!}
+    {!! Form::file('small_img') !!}
+</div>
+
 <!-- Img Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('img', 'Img:') !!}
+<div class="form-group col-sm-4">
+    {!! Form::label('img', 'Big img:') !!}
     {!! Form::file('img') !!}
 </div>
 
