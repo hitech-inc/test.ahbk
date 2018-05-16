@@ -51,19 +51,21 @@
 				</div>
 				<div class="contact_table">
 					<table>
+						@foreach ( $contacts as $contact )
+						@if ( $loop->index == 0 )
 						<tr>
 							<td colspan="2" style="text-align:center;">Отдел продаж в Шымкенте</td>
 						</tr>
 							<tr>
 								<td>Адрес</td>
-								<td>Казахстан, ЮКО, Сайрамский р-н, пос.Аксукент, Карабулакское шоссе 18А</td>
+								<td>{{ $contact->address }}</td>
 							</tr>
 							<tr>
 								<td>
 									Телефон
 								</td>
 								<td>
-									+7 702 500 66 05 Дана
+									{{ $contact->phone }}
 								</td>
 							</tr>
 							<tr>
@@ -71,9 +73,10 @@
 									E-mail
 								</td>
 								<td>
-									KalmenovaD@ahbk.kz
+									{{ $contact->email }}
 								</td>
 							</tr>
+						@else	
 						<tr>
 							<td colspan="2" style="text-align:center;">Отдел продаж в Алматы</td>
 						</tr>
@@ -82,7 +85,7 @@
 									Телефон
 								</td>
 								<td>
-									+7 777 241 17 54 Светлана Ивановна
+									{{ $contact->phone }}
 								</td>
 							</tr>
 							<tr>
@@ -90,10 +93,12 @@
 									E-mail
 								</td>
 								<td>
-									 info@ahbk.kz
+									 {{ $contact->email }}
 								</td>
 							</tr>
 						<tr>
+							@endif
+							@endforeach
 						</table>
 					</div>
 					@include('frontend.partials._callback')

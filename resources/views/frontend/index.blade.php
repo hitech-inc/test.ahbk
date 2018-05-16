@@ -34,8 +34,8 @@
         <li data-form="" class="">
           <div class="grid_block">
             <div class="product product_info">
-              <div class="product_img">
-                <img src="/img/galleries/{{ App\Models\Backend\Gallery::getGallery() }}" alt="" />
+              <div class="product_img" style="height: inherit;">
+                <img src="/img/galleries/big/{{ App\Models\Backend\Gallery::getGallery() }}" alt="" style="height: inherit;" />
               </div>
               <div class="product_title">Фотогалерея</div>
               <a href="/galleries" class="product_link">
@@ -44,29 +44,7 @@
             </div>
           </div>
         </li>
-        <li data-form="" class="smaller">
-          <div class="grid_block">
-            <div class="info_block">
-              <div class="info_title">Новости</div>
-              <div class="sliding_text">
-                <div class="sliding_text_front">
-                  <div class="info_text">
-                    <a href="#">Lorem ipsum  dolore sit.</a>
-                  </div>
-                  <div class="info_text info_date">01.02.2018</div>
-                </div>
-                <div class="sliding_text_back">
-                  <div class="info_text">
-                    <a href="#">Lorem ipsum  dolore sit</a>
-                  </div>
-                  <div class="info_text info_date">01.02.2018</div>
-                </div>
-                </div>
-                <a href="" class="more_span more_info"><span>Все новости</span></a>
-            </div>
-          </div>
-        </li>
-        <li data-form="" class="smaller">
+        <li data-form="" class="smaller" style="width: 40%">
           <div class="grid_block">
             <div class="info_block">
               <div class="info_title">Контакты</div>
@@ -84,11 +62,11 @@
             </div>
           </div>
         </li>
-        <li data-form="" class="">
+        <li data-form="" class="" style="width: 60%">
           <div class="grid_block">
             <div class="product product_info">
               <div class="product_img">
-                <img src="http://via.placeholder.com/644x413" alt="" />
+                <img src="/img/products/{{ App\Models\Category::getProduct() }}" alt="" />
               </div>
               <div class="product_title">Продукция</div>
               <a href="#" class="product_link">

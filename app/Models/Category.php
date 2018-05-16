@@ -65,4 +65,10 @@ class Category extends Model
 
         return ['' => 'Верхний уровень'] + $res->pluck('title', 'id')->all();
     }
+
+    public static function getProduct()
+    {
+        $product = self::where('img', '!=', null)->first();
+        return $product->img;
+    }
 }
