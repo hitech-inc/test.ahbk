@@ -58,28 +58,28 @@
                 <a style="color: #999999">Казахстан, ЮКО,Сайрамский р-н, пос.Аксукент, Карабулакское шоссе 18А</a>
             </li>                        <li>
                 
-                <a style="color: #999999">+7777 777 77 77</a>
+                <a style="color: #999999">+7 702 500 66 05</a>
             </li>                        <li>
                 
-                <a style="color: #999999">mail@mail.com</a>
+                <a style="color: #999999">KalmenovaD@ahbk.kz</a>
             </li>
                 </div>      </div>
         <div class="footer clear">
 <div style="text-align:center;">
-<a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+<!-- <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a> -->
     </div>
 <br>
 <!-- <div style="text-align:center;">
 <a href="#">СОГЛАШЕНИЕ ОБ ОБРАБОТКЕ ПЕРСОНАЛЬНЫХ ДАННЫХ</a>
     </div> -->
             <div class="footer_logo">
-                <a href="index.html"><img src="" alt="">Logo</a>
+                <a href="/"><img src="" alt="">Logo</a>
             </div>
             <div class="copyright">
-                © 2018Company.example
+                © 2018 AHBK.kz
             </div>
             <div class="developer">
-                Developed by – <a target="_blank" href="">hitech</a>
+                Разработано в  – <a target="_blank" href="">Hitech</a>
             </div>
         </div>
     </div>
