@@ -88,7 +88,8 @@
             <ul>
                 @foreach ( App\Models\Category::getCategories() as $category )
                 <li>
-                    <div class="link_wrap">
+                    <!-- ($category['children']) ? 'link_wrap' : '' это запись логическая проверка, если у категории есть дети то вставляем класс link_wrap, иначе пустая строка. Класс link_wrap выставит стрелку подкатегориям -->
+                    <div class="{{ ($category['children']) ? 'link_wrap' : '' }}">
                         <a href="{{ url('products/' . $category['category']->slug) }}">{{ $category['category']->title }}</a>
                     </div>
                     <!-- children -->

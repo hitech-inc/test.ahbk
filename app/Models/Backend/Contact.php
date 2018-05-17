@@ -70,5 +70,11 @@ class Contact extends Model
 
         return $coords;
     }
+
+    public static function getContacts()
+    {
+        $contacts = self::all();
+        return $contacts;
+    }
     
 }

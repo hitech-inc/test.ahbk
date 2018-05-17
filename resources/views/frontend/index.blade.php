@@ -27,7 +27,7 @@
             <div class="text_panel">
               <div class="h3">О компании</div>
               <p> {!! $textAbout->text !!}</p>
-              <a href="/about" class="more_span more_info"><span>Подробнее</span></a>
+              <a href="/about" class="more_span more_info indexMore"><span>Подробнее</span></a>
             </div>
           </div>
         </li>
@@ -44,21 +44,28 @@
             </div>
           </div>
         </li>
-        <li data-form="" class="smaller" style="width: 40%">
+        <li data-form="" class="" style="width: 40%; height: 495px;">
           <div class="grid_block">
             <div class="info_block">
               <div class="info_title">Контакты</div>
               <div class="sliding_text">
-                <div class="sliding_text_front">
-                  <div class="info_text">Казахстан, ЮКО,Сайрамский р-н, пос.Аксукент, Карабулакское шоссе 18А</div>
-                  <div class="info_text">+7777 777 77 77<br/>+7777 777 77 77 (Факс)<br /><a href="#">example@test.example</a></div>
+                @foreach( App\Models\Backend\Contact::getContacts() as $contact )
+                @if ( $loop->index == 0 )
+                <div class="info_text" style="color: #fff; font-weight: bold">Отдел продаж в Шымкенте</div>
+                <div class="sliding_text_front" style="position: initial; left: initial; top: initial;">
+                  <div class="info_text">{{ $contact->address }}</div>
+                  <div class="info_text">{{ $contact->phone }}<br/><a href="#">{{ $contact->email }}</a></div>
                 </div>
-                <div class="sliding_text_back">
-                  <div class="info_text">Казахстан, ЮКО,Сайрамский р-н, пос.Аксукент, Карабулакское шоссе 18А</div>
-                  <div class="info_text">+7 702 500 66 05<br/><!-- +7777 777 77 77 (Факс)<br /> --><a href="#">KalmenovaD@ahbk.kz</a></div>
+                @else
+                <div class="info_text" style="color: #fff; font-weight: bold">Отдел продаж в Алматы</div>
+                <div class="sliding_text_front" style="position: : initial; left: initial; top: initial;">
+                  <div class="info_text">{{ $contact->address }}</div>
+                  <div class="info_text">{{ $contact->phone }}<br/><a href="#">{{ $contact->email }}</a></div>
                 </div>
+                @endif
+                @endforeach
               </div>
-              <a href="/contacts" class="more_span more_info"><span>Подробнее</span></a>
+              <a href="/contacts" class="more_span more_info indexMore"><span>Подробнее</span></a>
             </div>
           </div>
         </li>
