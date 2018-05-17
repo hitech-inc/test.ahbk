@@ -55,7 +55,7 @@
                 </div>
                 <div class="sliding_text_back">
                   <div class="info_text">Казахстан, ЮКО,Сайрамский р-н, пос.Аксукент, Карабулакское шоссе 18А</div>
-                  <div class="info_text">+7777 777 77 77<br/>+7777 777 77 77 (Факс)<br /><a href="#">example@test.example</a></div>
+                  <div class="info_text">+7 702 500 66 05<br/><!-- +7777 777 77 77 (Факс)<br /> --><a href="#">KalmenovaD@ahbk.kz</a></div>
                 </div>
               </div>
               <a href="/contacts" class="more_span more_info"><span>Подробнее</span></a>
