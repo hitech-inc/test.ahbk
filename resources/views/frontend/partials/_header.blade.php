@@ -1,35 +1,37 @@
 <div class="center clear">
- <div class="header">
-   <a href="/" class="logo">
-    Logo
-</a>
-<div class="menu">
-    <ul>
+   <div class="header">
+     <a href="/" class="logo">
+        Logo
+    </a>
+    <div class="menu">
+        <ul>
 
-        <li>
-            <a  href="/about">О компании</a>
-            <ul>
-                <li>
-                    <div class="link_wrap">
-                        <a href="/about/technical-equipment">Техническое оснащение</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="link_wrap">
-                        <a href="/about/certificates">Сертификаты</a>
-                    </div>
-                </li>
+            <li>
+                <a  href="/about">О компании</a>
+                <ul>
+                    <li>
+                        <div class="link_wrap">
+                            <a href="/about/technical-equipment">Техническое оснащение</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link_wrap">
+                            <a href="/about/certificates">Сертификаты</a>
+                        </div>
+                    </li>
                  <!--                                    <li>
                 <div class="link_wrap">
                     <a href="#">Новости</a>
                 </div>
             </li> -->
-        </ul></li>                        <li>
+        </ul>
+        </li>                        
+        {{--<li>
             <a  href="/products">Продукция</a>
             <ul>
                 <li>
                     <div class="link_wrap">
-                        <a href="/products/specialist-clothes">Спецодежда</a>
+                        <a href="#">Спецодежда</a>
                     </div>
                     <ul>
                         <li>
@@ -47,23 +49,10 @@
                                 <a href="#">Спецодежда для частных компаний</a>
                             </div>
                         </li>
-                    <!--                                 <li>
-                <div class="link_wrap">
-                    <a href="#">Продукция 1 5</a>
-                </div>
-            </li>
-                                                    <li>
-                <div class="link_wrap">
-                    <a href="#">Продукция 1 6</a>
-                </div>
-            </li>
-                                                    <li>
-                <div class="link_wrap">
-                    <a href="#">Продукция 1 7</a>
-                </div>
-            </li> -->
-            
-        </ul></li>                        <li>
+
+                    </ul>
+                </li>                        
+            <li>
             <div class="link_wrap"> 
                 <a href="#">Военное обмундирование</a>
             </div>
@@ -81,44 +70,54 @@
             </div></li>                        <li>
                 <div class="link_wrap">
                     <a href="#">Корпоративная одежда</a>
-                </div></li>                        <li>
+                </div>
+            </li>                        
+            <li>
                     <div class="link_wrap">
                         <a href="#">Школьная форма</a>
-                    </div></li>                        <li>
+                    </div>
+                </li>                        <li>
                         <div class="link_wrap">
                             <a href="#">Домашний текстиль</a>
-                        </div></li>   </ul></li>
+                        </div></li>   
+                    </ul>
+                </li>--}}
+                <!-- test menu -->
+                <li>
+            <a  href="/products">Продукция</a>
+            <ul>
+                @foreach ( App\Models\Category::getCategories() as $category )
+                <li>
+                    <div class="link_wrap">
+                        <a href="{{ url('products/' . $category['category']->slug) }}">{{ $category['category']->title }}</a>
+                    </div>
+                    <!-- children -->
+                    <!-- Функция isset проверит если есть объект $category и его свойство children существует то код ниже сработает  -->
+                    @if(isset($category['children']))
+                    <ul>
+                        <!-- Пробегаюсь циклом по массиву category и по его свойству children, делаю временные перменные $slug=>$child, для вывода slug родителя и для вывода title ребенка, потому что в моделе мы  -->
+                        @foreach($category['children'] as $slug=>$child)
+                        <li>
+                            <div class="link_wrap">
+                                <!-- Обращаемся к массиву $category и в нем к ключу category и в нем свойство slug, таким образом выводим slug родительской категории у которой parent_id null. $child это title подкатегории -->
+                                <a href="{{ url('products/' . $category['category']->slug . '/' . $slug) }}">{{ $child }}</a>
+                            </div>
+                        </li>
+                        @endforeach
+                    </ul>
+                    @endif
+                    <!-- end children -->
+                </li>
+ 
+                    @endforeach      
+                    </ul>
+                </li>
+                <!-- end test menu -->
+                        
                         <li>
                             <a  href="/galleries">Фотогалерея</a>
-                </li><!--                         <li>
-                <a  href="#">Лаборатория</a>
-                <ul>
-                                                    <li>
-                <div class="link_wrap">
-                    <a href="#">О лаборатории</a>
-                </div>
-            </li>
-                                                    <li>
-                <div class="link_wrap">
-                    <a href="#">О лаборатории</a>
-                </div>
-            </li>
-                                                    <li>
-                <div class="link_wrap">
-                    <a href="#">О лаборатории</a>
-                </div>
-                <ul>
-                                                    <li>
-                <div class="link_wrap">
-                    <a href="#">Продукция1</a>
-                </div>
-            </li>
-                                                    <li>
-                <div class="link_wrap">
-                    <a href="#">Продукция2</a>
-                </div>
-            </li> 
-        </ul></li></ul></li>   -->                     <li>
+                        </li>
+                <li>
             <a  href="/contacts">Контакты</a>
         </li>
         <li class="header_num">
@@ -129,10 +128,10 @@
 <label for="search" class="search_trigger"></label>
 <div class="search_bar">
     <form action="/search/index.php">
-       <input type="text" name="q" placeholder="поиск по сайту" id="search" />
-       <input name="s" type="submit" value="Поиск" /></td>
-   </form> 
-   
+     <input type="text" name="q" placeholder="поиск по сайту" id="search" />
+     <input name="s" type="submit" value="Поиск" /></td>
+ </form> 
+
 </div>
 				<!-- <div class="language">
 					<div class="curent_lang">ru</div>

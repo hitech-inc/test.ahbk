@@ -82,16 +82,6 @@ class SiteController extends Controller
     	}
     }
 
-    // public function specialistClothes()
-    // {
-    // 	return view('frontend.specialist-clothes');
-    // }
-
-    // public function forIndustrialProduction()
-    // {
-    // 	return view('frontend.specialist-clothes-for-industrial-production');
-    // }
-
     public function galleries()
     {
       $galleries = Gallery::all();

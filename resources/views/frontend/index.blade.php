@@ -58,7 +58,7 @@
                   <div class="info_text">+7777 777 77 77<br/>+7777 777 77 77 (Факс)<br /><a href="#">example@test.example</a></div>
                 </div>
               </div>
-              <a href="#" class="more_span more_info"><span>Подробнее</span></a>
+              <a href="/contacts" class="more_span more_info"><span>Подробнее</span></a>
             </div>
           </div>
         </li>
@@ -69,7 +69,7 @@
                 <img src="/img/products/{{ App\Models\Category::getProduct() }}" alt="" />
               </div>
               <div class="product_title">Продукция</div>
-              <a href="#" class="product_link">
+              <a href="/products" class="product_link">
                 <span class="more_span"><span>Подробнее</span></span>
               </a>
             </div>
