@@ -12,45 +12,34 @@
                 <a href="/about/certificates">Сертификаты</a>
             </li>
 
-        </ul></div>                        <div class="footer_nav">
-            <div class="nav_title">Продукция</div>
+        </ul></div>                       
+        <div class="footer_nav">
+            <div class="nav_title">Продукция</div>    
             <ul>
-
+                @foreach (App\Models\Category::getCategories() as $category)
+                @if($loop->index < 4)
                 <li>
-                    <a href="">Спецодежда</a>
+                    <a href="{{ url('/products/' . $category['category']->slug) }}">{{$category['category']->title}}</a>
                 </li>
-
-                <li>
-                    <a href="">Военное обмундирование</a>
-                </li>
-
-                <li>
-                    <a href="">Форма для охранных компании</a>
-                </li>
-
-                <li>
-                    <a href="">Форма для медецинских учереждений</a>
-                </li>
-
-            </ul></div>                        <div class="footer_nav">
-                <div class="nav_title"></div>
-                <ul>
-                </ul>br>
-                <li>
-
-                    <a href="#">Форма для обслуживающего персонала</a>
-                </li>                        <li>
-
-                    <a href="#">Корпоративная одежда</a>
-                </li>                        <li>
-
-                    <a href="#">Школьная форма</a>
-                </li>                        <li>
-
-                    <a href="#">Комплекты постельного белья</a>
-                </li>
-
-            </ul></div>                        <div class="footer_nav">
+                @endif
+                @endforeach
+            </ul>
+        </div>                       
+        <div class="footer_nav">
+          <div class="nav_title"></div>
+          <ul>
+            <ul></ul>
+            <br>
+            @foreach( App\Models\Category::getCategories() as $category )
+            @if( $loop->index > 3 )
+            <li>
+              <a href="{{ url('/products/' . $category['category']->slug) }}">{{ $category['category']->title }}</a>
+            </li> 
+            @endif
+            @endforeach
+          </ul>
+        </div>                        
+        <div class="footer_nav">
                 <div class="nav_title">Контакты</div>
                 <ul>
                   <li>
@@ -63,7 +52,8 @@
 
                     <a style="color: #999999">KalmenovaD@ahbk.kz</a>
                 </li>
-            </div>      </div>
+            </div>      
+          </div>
             <div class="footer clear">
                 <div style="text-align:center;">
                     <!-- <a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a> -->
