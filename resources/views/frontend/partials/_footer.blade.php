@@ -42,16 +42,21 @@
         <div class="footer_nav">
                 <div class="nav_title">Контакты</div>
                 <ul>
+                  @foreach( App\Models\Backend\Contact::getContacts() as $contact )
+                  @if( $loop->index == 0 )
                   <li>
 
-                    <a style="color: #999999">Казахстан, ЮКО,Сайрамский р-н, пос.Аксукент, Карабулакское шоссе 18А</a>
+                    <a style="color: #999999">{{ $contact->address }}</a>
+                </li>                        <li> 
+
+                    <a style="color: #999999">{{ $contact->phone }}</a>
                 </li>                        <li>
 
-                    <a style="color: #999999">+7 702 500 66 05</a>
-                </li>                        <li>
-
-                    <a style="color: #999999">KalmenovaD@ahbk.kz</a>
+                    <a style="color: #999999">{{ $contact->email }}</a>
                 </li>
+                @endif
+                @endforeach
+              </ul>
             </div>      
           </div>
             <div class="footer clear">
