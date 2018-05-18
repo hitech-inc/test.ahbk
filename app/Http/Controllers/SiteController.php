@@ -107,9 +107,9 @@ class SiteController extends Controller
         'text' => $request->text
       ];
 
-      $success = '';
+      //$success = '';
       //dd($data);
-      Mail::to('advanced315@gmail.com')->send( new Callback( $data ) );
+      Mail::to(env('MAIL_TO'))->send( new Callback( $data ) );
       return 1;
     }
 }
