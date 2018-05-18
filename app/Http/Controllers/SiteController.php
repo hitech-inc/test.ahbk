@@ -12,6 +12,8 @@ use App\Models\Backend\Background;
 use App\Models\TechnicalEquipment;
 use App\Models\Backend\Certificate;
 use App\Models\Backend\textBlocks;
+use App\Mail\Callback;
+use Mail;
 
 class SiteController extends Controller
 {
@@ -93,5 +95,21 @@ class SiteController extends Controller
       $contacts = Contact::all();
 
     	return view('frontend.contacts', compact('contacts'));
+    }
+
+    public function callback( Request $request )
+    {
+      $data = [
+        'name' => $request->name,
+        'company' => $request->company,
+        'phone' => $request->phone,
+        'email' => $request->email,
+        'text' => $request->text
+      ];
+
+      $success = '';
+      //dd($data);
+      Mail::to('advanced315@gmail.com')->send( new Callback( $data ) );
+      return 1;
     }
 }

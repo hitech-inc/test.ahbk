@@ -12,21 +12,22 @@
 	</div>
 	<div class="callback_form callback_panel">
 		<div class="valign_middle">
-			<form method="post" action="#" id="callbak_form" data-req="PHONE">
+			<form method="post" action="/callback" name="myForm" id="" data-req="PHONE">
+				{{ csrf_field() }}
 				<input type="hidden" name="HEAD" value=""/>
 				<table>
 					<tr>
 						<td>
-							<input required type="text" name="NAME" placeholder="Ф.И.О."/>
+							<input required type="text" name="name" placeholder="Ф.И.О."/>
 						</td>
 						<td>
-							<input required type="text" name="COMPANY" placeholder="Организация" class="text_input" />
+							<input required type="text" name="company" placeholder="Организация" class="text_input" />
 						</td>
 						<td>
-							<input required type="text" name="PHONE" placeholder="Телефон" class="phone_input" />
+							<input required type="text" name="phone" placeholder="Телефон" class="phone_input" />
 						</td>
 						<td>
-							<input required type="text" name="EMAIL" placeholder="E-mail" class="email_input" />
+							<input required type="text" name="email" placeholder="E-mail" class="email_input" />
 						</td>
 					</tr>
 				</tbody>
@@ -35,10 +36,10 @@
 				<tbody>
 					<tr>
 						<td width="63%">
-							<textarea rows="2" cols="1" name="TEXTAREA" placeholder="Сообщение" class="text_input"></textarea>
+							<textarea rows="2" cols="1" name="text" placeholder="Сообщение" class="text_input"></textarea>
 						</td>
 						<td>
-							<button class="button w_100_pс">
+							<button type="submit" class="button w_100_pс">
 								<span class="black_button">	
 
 									Свяжитесь со мной
@@ -52,14 +53,14 @@
 					</tr>
 				</table>
 			</form>
-			<script type="text/javascript">
+			<!-- <script type="text/javascript">
 				$(document).ready(function(){
 					$("#callbak_form").submit(function(){
 						formSubmit();
 						return false;
 					});
 				});
-			</script>
+			</script> -->
 			<br><center><p><input name="a" value="Даю согласие на обработку своих персональных данных" checked="" type="checkbox">&nbsp;Даю <a href="../../../soglashenie-ob-obrabotke-personalnykh-dannykh.php.html" target="_blank" style="color:#104E8B;text-decoration:underline;">согласие на обработку</a> своих персональных данных</p></center>
 		</div>
 	</div><!-- callback_form -->

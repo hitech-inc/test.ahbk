@@ -25,8 +25,7 @@ Route::get('about/technical-equipment', [
 Route::get('about/certificates', 'SiteController@certificates');
 Route::get('/products', 'SiteController@products');
 Route::get('/products/{categories?}/{child?}', 'SiteController@products');
-// Route::get('/products/specialist-clothes', 'SiteController@specialistClothes');
-// Route::get('/products/specialist-clothes/specialist-clothes-for-industrial-production', 'SiteController@forIndustrialProduction');
+Route::post('/callback', 'SiteController@callback');
 
 Route::get('/galleries', 'SiteController@galleries');
 Route::get('/contacts', 'SiteController@contacts');
