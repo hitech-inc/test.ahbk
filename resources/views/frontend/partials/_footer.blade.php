@@ -74,7 +74,7 @@
     © 2018 AHBK.kz
 </div>
 <div class="developer">
-    Разработано в  – <a target="_blank" href="">Hitech</a>
+    Разработано в  – <a target="_blank" href="http://qaz-tech.kz">Hitech</a>
 </div>
 </div>
 </div>
