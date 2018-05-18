@@ -1,7 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112536242-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112536242-1');
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="/bitrix/cache/css/s1/ahbk/kernel_main/kernel_main.css?151689290126919" type="text/css"  rel="stylesheet" />
